@@ -1,0 +1,211 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+@font-face {
+   font-family: 'Arial';
+   src: url('./Fonts/Arial-Black.eot');
+   src: url('./Fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+      url('./Fonts/Arial-Black.woff') format('woff'),
+      url('./Fonts/Arial-Black.ttf') format('truetype');
+   font-weight: 900;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Arial';
+   src: url('./Fonts/ArialMT.eot');
+   src: url('./Fonts/ArialMT.eot?#iefix') format('embedded-opentype'),
+      url('./Fonts/ArialMT.woff') format('woff'),
+      url('./Fonts/ArialMT.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+body {
+   font-family: Arial;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #2F2F2F;
+}
+
+.l-container {
+   margin: 0 auto;
+   max-width: 1244px;
+   padding-left: 32px;
+   padding-right: 32px;
+}
+
+.h1 {
+   margin-bottom: 40px;
+   font-size: 48px;
+   line-height: 1.5;
+   font-weight: 900;
+   text-transform: uppercase;
+}
+
+.s-collection {
+   padding: 40px 0 60px 0;
+   background-color: #E5E5E5;
+}
+
+.s-collection__header {
+   text-align: center;
+}
+
+.s-collection__grid {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -10px;
+}
+
+.s-collection__grid-column {
+   width: 33.3333%;
+   padding: 0 10px;
+   margin-bottom: 40px;
+}
+
+.c-card-product {
+   background-color: #FFFFFF;
+   border-radius: 12px;
+   overflow: hidden;
+}
+
+.c-card-product__img-box {
+   padding: 0 0 58% 0;
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 24px;
+}
+
+.c-card-product__img {
+   position: absolute;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+}
+
+.c-card-product__tags {
+   position: absolute;
+   left: 16px;
+   top: 16px;
+   z-index: 2;
+   text-transform: uppercase;
+}
+
+.c-card-product__tag-new {
+   margin-right: 16px;
+   height: 24px;
+   display: inline-block;
+   padding: 0 16px;
+   line-height: 25px;
+   background: #FDCFF3;
+   border-radius: 8px;
+}
+
+.c-card-product__tag-last {
+   margin-right: 16px;
+   height: 24px;
+   display: inline-block;
+   padding: 0 16px;
+   line-height: 25px;
+   background: #FFCF56;
+   border-radius: 8px;
+}
+
+.c-card-product__info {
+   padding: 0 24px 24px;
+}
+
+.c-card-product__title {
+   font-size: 24px;
+   line-height: 1.5;
+   font-weight: 900;
+   margin-bottom: 16px;
+}
+
+.c-card-product__desc {
+   min-height: 96px;
+   margin-bottom: 24px;
+}
+
+.c-card-product__btn {
+   width: 100%;
+   height: 48px;
+   border: 2px solid #42940F;
+   border-radius: 8px;
+   font-size: 18px;
+   line-height: 25px;
+   font-weight: 900;
+   text-transform: uppercase;
+   background-color: #FFFFFF;
+   color: #42940F;
+   transition: all 0.3s ease-in;
+}
+
+.c-card-product__btn-disabled {
+   width: 100%;
+   height: 48px;
+   border-radius: 8px;
+   font-size: 18px;
+   line-height: 25px;
+   font-weight: 900;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   border: 2px solid #4E4E4E;
+   background-color: #4E4E4E;
+   cursor: auto;
+}
+
+.c-card-product__btn:hover {
+   background-color: #42940F;
+   color: #FFFFFF;
+}
+
+.c-card-product__btn:active {
+   border: 2px solid #1F5200;
+   background-color: #1F5200;
+}
+
+@media only screen and (max-width: 991px) {
+   .s-collection__grid-column {
+      width: 50%;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+   .s-collection__grid-column {
+      width: 100%;
+   }
+
+   .c-card-product__desc {
+      min-height: auto;
+   }
+
+   .c-card-product__title {
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 900;
+      margin-bottom: 16px;
+   }
+
+   .c-card-product__btn {
+      font-size: 16px;
+   }
+
+   .c-card-product__btn-disabled {
+      font-size: 16px;
+   }
+}
+
+@media only screen and (max-width: 560px) {
+   .h1 {
+      font-size: 28px;
+      margin-bottom: 25px;
+   }
+
+   .c-card-product__tags {
+      font-size: 13px;
+   }
+}
